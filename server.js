@@ -19,9 +19,12 @@ const io = new Server(server, {
 const sheetId = process.env.SHEET_ID;
 
 // --- CONFIGURAÇÃO CORRETA PARA CONTA DE SERVIÇO ---
-const auth = new google.auth.GoogleAuth({
-    scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'], // Escopo para leitura
-    keyFile: process.env.GOOGLE_APPLICATION_CREDENTIALS, // Aponta para o arquivo JSON
+const auth = new GoogleAuth({
+    credentials: {
+    client_email: process.env.GOOGLE_CLIENT_EMAIL,
+    private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+    },
+    scopes: ['https://www.googleapis.com/auth/spreadsheets'],
 });
 
 // Crie o cliente sheets usando o objeto de autenticação 'auth'
