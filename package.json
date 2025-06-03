@@ -2,9 +2,9 @@
   "name": "google-sheets-chart",
   "version": "1.0.0",
   "description": "Real-time chart from Google Sheet",
-  "main": "server.js", // <-- Esta linha é uma convenção, mas o "start" é o que importa para o deploy
+  "main": "server.js", 
   "scripts": {
-    "start": "node server.js", // <-- VERIFIQUE/ADICIONE ESTA LINHA
+    "start": "node server.js", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
