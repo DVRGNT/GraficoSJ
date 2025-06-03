@@ -1,20 +1,22 @@
 {
   "name": "google-sheets-chart",
   "version": "1.0.0",
-  "main": "server.js",
+  "description": "Real-time chart from Google Sheet",
+  "main": "server.js", // <-- Esta linha é uma convenção, mas o "start" é o que importa para o deploy
   "scripts": {
-    "start": "node server.js",
+    "start": "node server.js", // <-- VERIFIQUE/ADICIONE ESTA LINHA
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "chart.js": "^4.4.3", 
+    "chart.js": "^4.4.3",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "googleapis": "^134.0.0",
-    "socket.io": "^4.7.5"
+    "socket.io": "^4.7.5",
+    "date-fns": "^2.30.0",
+    "chartjs-adapter-date-fns": "^3.0.0"
   }
 }
